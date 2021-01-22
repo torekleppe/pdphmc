@@ -1,0 +1,292 @@
+[
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/ADtarget.hpp",
+        "file_last_write": 1589184275.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/CIP_Wishart.hpp",
+        "file_last_write": 1588752130.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/Cheby.hpp",
+        "file_last_write": 1569514712.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPHMC.hpp",
+        "file_last_write": 1605124623.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
+        "file_last_write": 1606394047.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/codeTransform.hpp",
+        "file_last_write": 1606120237.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/densities.hpp",
+        "file_last_write": 1561977865.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/errorLog.hpp",
+        "file_last_write": 1588681730.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/extRKN.hpp",
+        "file_last_write": 1606305297.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/fast_spec_funs.hpp",
+        "file_last_write": 1590578217.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/identityPlusRank1Chol.hpp",
+        "file_last_write": 1568792488.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/json_wrap.hpp",
+        "file_last_write": 1606120678.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/lambda.hpp",
+        "file_last_write": 1578922756.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/lbfgs.hpp",
+        "file_last_write": 1589809036.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/massmatrix.hpp",
+        "file_last_write": 1606308630.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/allocators.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/cursorstreamwrapper.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/document.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/encodedstream.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/encodings.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/error/en.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/error/error.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/filereadstream.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/filewritestream.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/fwd.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/internal/biginteger.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/internal/clzll.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/internal/diyfp.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/internal/dtoa.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/internal/ieee754.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/internal/itoa.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/internal/meta.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/internal/pow10.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/internal/regex.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/internal/stack.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/internal/strfunc.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/internal/strtod.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/internal/swap.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/istreamwrapper.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/memorybuffer.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/memorystream.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/msinttypes/inttypes.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/msinttypes/stdint.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/ostreamwrapper.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/pointer.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/prettywriter.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/rapidjson.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/reader.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/schema.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/stream.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/stringbuffer.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rapidjson/writer.h",
+        "file_last_write": 1602525246.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rng.hpp",
+        "file_last_write": 1586333613.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/rng_Rcpp.hpp",
+        "file_last_write": 1586846711.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/sparseChol.hpp",
+        "file_last_write": 1561636533.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/textfileio.hpp",
+        "file_last_write": 1578661147.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/transformed_prior.hpp",
+        "file_last_write": 1590579498.0,
+        "definitions": []
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/tridiagChol.hpp",
+        "file_last_write": 1590477245.0,
+        "definitions": []
+    }
+]

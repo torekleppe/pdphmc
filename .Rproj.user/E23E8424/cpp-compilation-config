@@ -1,0 +1,17 @@
+{
+    "args": [
+        "-I/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include",
+        "-I/usr/local/include",
+        "-I/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1",
+        "-I/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include",
+        "-I/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include",
+        "-I/Library/Developer/CommandLineTools/usr/include",
+        "-I/Library/Frameworks/R.framework/Resources/include",
+        "-DNDEBUG",
+        "-I/usr/local/include",
+        "-fPIC"
+    ],
+    "pch": "",
+    "is_cpp": false,
+    "hash": "15197294611607432132"
+}

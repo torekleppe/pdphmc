@@ -1,0 +1,76 @@
+
+require(rstan)
+require(pdphmc)
+
+
+#if(!exists("raw")){
+raw <- read.table("DATA_CAW.txt")
+raw <- t(raw)
+#}
+q <- 5
+T <- dim(raw)[1]
+rr <- array(dim=c(q,q,T))
+k <- 1
+
+for(j in 1:q){
+  for(i in j:q){
+    rr[i,j,] <- raw[,k]
+    rr[j,i,] <- rr[i,j,]
+    k <- k+1
+  }
+}
+
+#T <- 1000
+
+yinv <- matrix(0.0,nrow=T*q,ncol=q)
+yy <- matrix(0.0,nrow=T*q,ncol=q)
+ldets <- 0.0
+for(t in 1:T){
+  yy[((t-1)*q+1):(t*q),] <- rr[,,t]
+  yinv[((t-1)*q+1):(t*q),] <- solve(rr[,,t])
+  ldets <- ldets + 2.0*sum(log(diag(chol(rr[,,t]))))
+}
+
+
+
+chains <- 10
+cores <- 1
+Tmax <- 5000
+h.0 <- c(0.39035784,
+         0.29355181,
+         0.29500684,
+         0.22925192,
+         0.19641877,
+         0.16663467,
+         0.12474880,
+         0.21586103,
+         0.18400667,
+         0.10879085)
+
+lnu.0 <- -0.06935434
+lphi.0 <- c(4.13009026, 4.53550637,  3.91026493,  3.49787375,  3.91649845)
+mu.0 <- c(4.15074632,  4.11688525,  3.71114757, 4.10998291,  3.52874206)
+lsigmaSq.0 <- c(-2.35665621, -2.66023710, -2.45270714, -2.55785135, -2.73708414)
+
+
+mdl.a <- build("realVol.cpp",lambda="lambda_arclength",massMatrix = "diagMassVARI")
+ 
+fit.p.a <- run(mdl.a,Tmax=Tmax,data=list(yy=yy,yinv=yinv,ldets=ldets),
+                pars=c("h","lnu","lsigmaSq","lphi","mu"),chains=chains,
+                #fixedMiDiag=list(zz=1.0),
+                init=list(lnu=lnu.0,lphi=lphi.0,mu=mu.0,h=h.0,lsigmaSq=lsigmaSq.0),
+               control=list(absTol=1.0e-3,relTol=1.0e-3,lambdaAdapt=c(1.0,1.0,5.0)),
+               cores=cores)
+
+save.image(file="Computations_b2")
+
+fit.p.al <- run(mdl.a,Tmax=Tmax,data=list(yy=yy,yinv=yinv,ldets=ldets),
+               pars=c("h","lnu","lsigmaSq","lphi","mu"),chains=chains,
+               #fixedMiDiag=list(zz=1.0),
+               init=list(lnu=lnu.0,lphi=lphi.0,mu=mu.0,h=h.0,lsigmaSq=lsigmaSq.0),
+               control=list(absTol=1.0e-3,relTol=1.0e-3,lambdaAdapt=c(1.0,1.0,10.0)),
+               cores=cores)
+
+save.image(file="Computations_b2")
+
+

@@ -1,0 +1,24 @@
+{
+    "id": "8631100C",
+    "path": "~/Dropbox/work/PDP_HMC/package/pdphmc/inst/examples/OneSampleGaussian.cpp",
+    "project_path": "inst/examples/OneSampleGaussian.cpp",
+    "type": "cpp",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1611318728856.0,
+    "source_on_save": false,
+    "relative_order": 7,
+    "properties": {
+        "cursorPosition": "35,29",
+        "scrollLine": "14"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1611319968,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1611319968790,
+    "read_only": false,
+    "read_only_alternatives": []
+}
