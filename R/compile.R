@@ -6,7 +6,16 @@
       print(rtools.path)
       compiler.path <- paste0(strsplit(rtools.path,"usr")[[1]][1],"mingw64\\bin\\g++.exe")
       print(compiler.path)
-      return(list(compiler=normalizePath(compiler.path,mustWork = TRUE)))
+      if(file.exists(normalizePath(compiler.path,mustWork=FALSE))){
+        return(list(compiler=normalizePath(compiler.path)))
+      }
+      compiler.path <- paste0(strsplit(rtools.path,"usr")[[1]][1],"mingw_64\\bin\\g++.exe")
+      print(compiler.path)
+      if(file.exists(normalizePath(compiler.path,mustWork=FALSE))){
+        return(list(compiler=normalizePath(compiler.path)))
+      } else {
+        stop("unknown rtools directory format")
+      }
     } else {
       stop("requires a working c++ compiler, get the rtools package")
     }
