@@ -219,18 +219,8 @@
     },
     {
         "file": "C:/Users/47959/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/extRKN.hpp",
-        "file_last_write": 1607672872.0,
-        "definitions": [
-            {
-                "usr": "c:@ST>3#T#T#T@extRKN64",
-                "kind": 2,
-                "parent_name": "",
-                "name": "extRKN64",
-                "file": "C:/Users/47959/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/extRKN.hpp",
-                "line": 19,
-                "column": 7
-            }
-        ]
+        "file_last_write": 1611566155.0,
+        "definitions": []
     },
     {
         "file": "C:/Users/47959/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/fast_spec_funs.hpp",

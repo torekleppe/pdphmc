@@ -7,6 +7,7 @@ Author: Tore Selland Kleppe
 Maintainer: Tore Selland Kleppe <tore.kleppe@uis.no>
 Description: Piecewise deterministic Markov processes using Hamiltonian dynamics.
 License: GPL (>= 2)
+Depends: R (>= 4.0.0)
 Imports: methods, rstan, parallel, foreach, doParallel, StanHeaders, RcppEigen, BH, RcppProgress, jsonlite, pkgbuild
 RoxygenNote: 7.1.1
 Encoding: UTF-8

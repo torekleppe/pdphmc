@@ -1,9 +1,27 @@
 {
     "args": [
         "-IC:/Program Files/RStudio/resources/libclang/builtin-headers/5.0.2",
-        "-IC:/Program Files/RStudio/resources/libclang/builtin-headers/libc++/5.0.2"
+        "-IC:/Program Files/RStudio/resources/libclang/builtin-headers/libc++/5.0.2",
+        "-IC:/PROGRA~1/R/R-40~1.3/include",
+        "-DNDEBUG",
+        "-IC:/Users/47959/Documents/R/win-library/4.0/Rcpp/include/",
+        "-IC:/Users/47959/Documents/R/win-library/4.0/RcppEigen/include/",
+        "-IC:/Users/47959/Documents/R/win-library/4.0/RcppEigen/include/unsupported",
+        "-IC:/Users/47959/Documents/R/win-library/4.0/BH/include",
+        "-IC:/Users/47959/Documents/R/win-library/4.0/StanHeaders/include/src/",
+        "-IC:/Users/47959/Documents/R/win-library/4.0/StanHeaders/include/",
+        "-IC:/Users/47959/Documents/R/win-library/4.0/RcppParallel/include/",
+        "-IC:/Users/47959/Documents/R/win-library/4.0/rstan/include",
+        "-DEIGEN_NO_DEBUG",
+        "-DBOOST_DISABLE_ASSERTS",
+        "-DBOOST_PENDING_INTEGER_LOG2_HPP",
+        "-DSTAN_THREADS",
+        "-DBOOST_NO_AUTO_PTR",
+        "-include",
+        "-std=c++1y",
+        "-std=gnu99"
     ],
     "pch": "",
     "is_cpp": false,
-    "hash": "1607432132"
+    "hash": "16112338891611315022"
 }
