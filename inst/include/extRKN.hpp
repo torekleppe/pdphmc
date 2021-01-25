@@ -237,7 +237,7 @@ public:
   }
   
   inline void energyAdaptEps(){
-    if(isfinite(Herr_) && err_> 0.0 && Herr_<100.0 ){
+    if(cmath::isfinite(Herr_) && err_> 0.0 && Herr_<100.0 ){
       eps_ *= fmin(1.5,fmax(0.1,0.9*pow(Herr_,-0.1428571)));  // -1/7
     } else {
       eps_ *= 0.1;
