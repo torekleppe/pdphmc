@@ -2,7 +2,7 @@
 #ifndef __EXTRKN_HPP__
 #define __EXTRKN_HPP__
 
-
+#include <cmath>
 /*
  * The following class implements the order 6,4,6 Runge Kutta Nystöm triple
  * RKN6(4)6FD taken from Dormand, Prince, Runge-Kutta-Nystrom Triples,
@@ -237,7 +237,7 @@ public:
   }
   
   inline void energyAdaptEps(){
-    if(cmath::isfinite(Herr_) && err_> 0.0 && Herr_<100.0 ){
+    if(std::isfinite(Herr_) && err_> 0.0 && Herr_<100.0 ){
       eps_ *= fmin(1.5,fmax(0.1,0.9*pow(Herr_,-0.1428571)));  // -1/7
     } else {
       eps_ *= 0.1;
@@ -274,7 +274,7 @@ public:
     
     lams_(0) = (*lam_).lambda(q0,p0,grads_.col(0),(*M_));
     
-    return(!(isfinite(funvals_(0)) && isfinite(lams_(0))));
+    return(!(std::isfinite(funvals_(0)) && std::isfinite(lams_(0))));
   }
   
   
@@ -352,7 +352,7 @@ public:
       epssq*0.008358715283968025328*fs_.col(0);
     funvals_(1) = (*t_).geval(qs_.col(1),gens_.col(1),grads_.col(1));
     (*M_).applyMinv(grads_.col(1),fs_.col(1));
-    if(!isfinite(funvals_(1)) || ! fs_.col(1).array().isFinite().all()){
+    if(!std::isfinite(funvals_(1)) || ! fs_.col(1).array().isFinite().all()){
       err_ = -1.0;
       return(err_);
     }
@@ -362,7 +362,7 @@ public:
       (epssq*0.022289907423914734209)*fs_.col(1);
     funvals_(2) = (*t_).geval(qs_.col(2),gens_.col(2),grads_.col(2));
     (*M_).applyMinv(grads_.col(2),fs_.col(2));
-    if(!isfinite(funvals_(2)) || ! fs_.col(2).array().isFinite().all()){
+    if(!std::isfinite(funvals_(2)) || ! fs_.col(2).array().isFinite().all()){
       err_ = -2.0;
       return(err_);
     }
@@ -373,7 +373,7 @@ public:
       (epssq*0.30903498720296753653)*fs_.col(2);
     funvals_(3) = (*t_).geval(qs_.col(3),gens_.col(3),grads_.col(3));
     (*M_).applyMinv(grads_.col(3),fs_.col(3));
-    if(!isfinite(funvals_(3)) || ! fs_.col(3).array().isFinite().all()){
+    if(!std::isfinite(funvals_(3)) || ! fs_.col(3).array().isFinite().all()){
       err_ = -3.0;
       return(err_);
     } 
@@ -385,7 +385,7 @@ public:
       (epssq*0.12585075653062489426)*fs_.col(3);
     funvals_(4) = (*t_).geval(qs_.col(4),gens_.col(4),grads_.col(4));
     (*M_).applyMinv(grads_.col(4),fs_.col(4));
-    if(!isfinite(funvals_(4)) || ! fs_.col(4).array().isFinite().all()){
+    if(!std::isfinite(funvals_(4)) || ! fs_.col(4).array().isFinite().all()){
       err_ = -4.0;
       return(err_);
     } 
@@ -397,7 +397,7 @@ public:
       (epssq*0.011172560192168035305)*fs_.col(4);
     funvals_(5) = (*t_).geval(qs_.col(5),gens_.col(5),grads_.col(5));
     (*M_).applyMinv(grads_.col(5),fs_.col(5));
-    if(!isfinite(funvals_(5)) || ! fs_.col(5).array().isFinite().all()){
+    if(!std::isfinite(funvals_(5)) || ! fs_.col(5).array().isFinite().all()){
       err_ = -5.0;
       return(err_);
     } 
