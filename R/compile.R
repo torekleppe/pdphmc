@@ -3,8 +3,9 @@
   if(identical(.Platform$OS.type,"windows")){
     if(pkgbuild::has_build_tools()){
       rtools.path <- gsub("/","\\",pkgbuild::rtools_path(),fixed=TRUE) # note, this is not the path to the compiler binary!!
-      
+      print(rtools.path)
       compiler.path <- paste0(strsplit(rtools.path,"usr")[[1]][1],"mingw64\\bin\\g++.exe")
+      print(compiler.path)
       return(list(compiler=normalizePath(compiler.path,mustWork = TRUE)))
     } else {
       stop("requires a working c++ compiler, get the rtools package")
