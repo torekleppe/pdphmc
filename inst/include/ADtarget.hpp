@@ -28,7 +28,7 @@ public:
     dg_ = t_.dimGenerated();
     dpar_.resize(d_);
   }
-  
+  inline void atEvent(){t_.atEvent();}
   inline int dim() const {return d_;}
   inline int dimGenerated() const {return dg_;}
   
@@ -87,6 +87,7 @@ public:
   }
   inline int dim() const {return ed_;}
   inline int dimGenerated() const {return edg_;}
+  inline void atEvent(){adt_.atEvent();}
   
   inline double feval(const Eigen::VectorXd &par, Eigen::VectorXd &gen){
     double ret = adt_.feval(par.head(d_),gen.head(dg_));

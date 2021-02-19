@@ -1,0 +1,7 @@
+
+rmd_files: 
+  html : ["index.Rmd", "intro.Rmd", "usage.Rmd", "modelFile.Rmd"]
+  latex : ["index.Rmd", "intro.Rmd", "usage.Rmd", "modelFile.Rmd"]
+  git : ["index.Rmd", "intro.Rmd", "usage.Rmd", "modelFile.Rmd"]
+
+delete_merged_file : true

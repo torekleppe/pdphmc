@@ -31,6 +31,11 @@ public:
   inline int dimGenerated() const {return(
       //{[[GENERATED_DIM]]}
   );}
+  
+  inline void atEvent() {
+    //{[[ATEVENT_BLOCK]]}
+  }
+  
   template <class var>
   var eval(const Eigen::Matrix<var,Eigen::Dynamic,1> &__par, 
            Eigen::Ref< Eigen::VectorXd > &__gen) const {

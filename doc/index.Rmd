@@ -1,0 +1,14 @@
+
+--- 
+title: "Using the **pdphmc** package"
+author: "Tore Selland Kleppe"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    df_print: paged
+  bookdown::gitbook: default
+documentclass: book
+bibliography: refs.bib
+biblio-style: apalike
+link-citations: yes
+---

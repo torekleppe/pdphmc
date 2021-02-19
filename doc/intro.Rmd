@@ -1,0 +1,34 @@
+
+
+
+# Introduction
+
+This bookdown aims to document the usage of the package **pdphmc**. The package
+implements a class of piecewise deterministc Markov processes (PDMP) where the
+deterministic dynamics are those of a Hamiltonian dynamic system. 
+
+The actual PDMP
+algorithm is described in detail at [https://arxiv.org/abs/2005.01285](https://arxiv.org/abs/2005.01285) and is
+not repeated in much detail here. Rather this bookdown describes 
+
+- how to use the software for analyzing your own models 
+- how to choose suitable tuning parameters influencing the behaviour of the sampling algorithm
+
+
+## Getting **pdphmc**
+
+So far **pdphmc** is only available on [github](https://github.com/torekleppe/pdphmc).
+Before installing **pdphmc**, make sure that you have a working installation
+of **rstan** (see [RStan getting started](https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started))
+and the you are running **R** version 4.0 or greater. The software is routinely tested on mac, linux and windows (using the compiler that ships with rtools).
+
+**pdphmc** is most easily installed
+using (requires the **devtools** package)
+```{r eval=FALSE}
+#install.packages("devtools")
+devtools::install_github("https://github.com/torekleppe/pdphmc")
+```
+
+
+
+

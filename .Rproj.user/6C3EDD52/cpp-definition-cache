@@ -1,7 +1,7 @@
 [
     {
         "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/ADtarget.hpp",
-        "file_last_write": 1607672997.0,
+        "file_last_write": 1612773132.0,
         "definitions": [
             {
                 "usr": "c:@ST>1#T@ADtarget",
@@ -28,6 +28,15 @@
                 "name": "setup",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/ADtarget.hpp",
                 "line": 25,
+                "column": 15
+            },
+            {
+                "usr": "c:@ST>1#T@ADtarget@F@atEvent#",
+                "kind": 7,
+                "parent_name": "ADtarget<_target_type_>",
+                "name": "atEvent",
+                "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/ADtarget.hpp",
+                "line": 31,
                 "column": 15
             },
             {
@@ -121,12 +130,21 @@
                 "column": 14
             },
             {
+                "usr": "c:@ST>1#T@ADtarget_cp2@F@atEvent#",
+                "kind": 7,
+                "parent_name": "ADtarget_cp2<_target_type_>",
+                "name": "atEvent",
+                "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/ADtarget.hpp",
+                "line": 90,
+                "column": 15
+            },
+            {
                 "usr": "c:@ST>1#T@ADtarget_cp2@F@feval#&1I#&I#",
                 "kind": 7,
                 "parent_name": "ADtarget_cp2<_target_type_>",
                 "name": "feval(const int &, int &)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/ADtarget.hpp",
-                "line": 91,
+                "line": 92,
                 "column": 17
             },
             {
@@ -135,7 +153,7 @@
                 "parent_name": "ADtarget_cp2<_target_type_>",
                 "name": "feval(const int &, int)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/ADtarget.hpp",
-                "line": 97,
+                "line": 98,
                 "column": 17
             },
             {
@@ -144,7 +162,7 @@
                 "parent_name": "ADtarget_cp2<_target_type_>",
                 "name": "geval(const int &, int, int)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/ADtarget.hpp",
-                "line": 103,
+                "line": 104,
                 "column": 10
             }
         ]
@@ -208,7 +226,7 @@
     },
     {
         "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPHMC.hpp",
-        "file_last_write": 1607357526.0,
+        "file_last_write": 1612771410.0,
         "definitions": [
             {
                 "usr": "c:@F@doubleValue#1d#",
@@ -268,7 +286,7 @@
     },
     {
         "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-        "file_last_write": 1607673022.0,
+        "file_last_write": 1612773012.0,
         "definitions": [
             {
                 "usr": "c:@ST>5#T#t>1#T#t>3#T#T#T#t>1#T#T@PDPsampler",
@@ -303,7 +321,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "trajectory(const bool)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 353,
+                "line": 354,
                 "column": 7
             },
             {
@@ -312,7 +330,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "fillPropertyList",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 571,
+                "line": 574,
                 "column": 8
             },
             {
@@ -321,7 +339,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "seed(const int)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 664,
+                "line": 667,
                 "column": 15
             },
             {
@@ -330,7 +348,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "getDim",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 665,
+                "line": 668,
                 "column": 14
             },
             {
@@ -339,7 +357,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "getDimGenerated",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 666,
+                "line": 669,
                 "column": 14
             },
             {
@@ -348,7 +366,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "getTargetCopies",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 667,
+                "line": 670,
                 "column": 14
             },
             {
@@ -357,7 +375,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "getTargetDim",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 668,
+                "line": 671,
                 "column": 14
             },
             {
@@ -366,7 +384,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "getTargetDimGenerated",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 669,
+                "line": 672,
                 "column": 14
             },
             {
@@ -375,7 +393,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "setAbsTol(const double)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 670,
+                "line": 673,
                 "column": 15
             },
             {
@@ -384,7 +402,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "setRelTol(const double)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 671,
+                "line": 674,
                 "column": 15
             },
             {
@@ -393,7 +411,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "setPrintPrefix(const std::string &)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 672,
+                "line": 675,
                 "column": 15
             },
             {
@@ -402,7 +420,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "lambdaAdaptOff(const double, const double)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 673,
+                "line": 676,
                 "column": 15
             },
             {
@@ -411,7 +429,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "lambdaAdaptOn",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 678,
+                "line": 681,
                 "column": 15
             },
             {
@@ -420,7 +438,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "setProperty(const int, const int)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 684,
+                "line": 687,
                 "column": 8
             },
             {
@@ -429,7 +447,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "getProperty(const int)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 720,
+                "line": 723,
                 "column": 19
             },
             {
@@ -438,7 +456,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "setProperty(const std::string &, const int)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 783,
+                "line": 786,
                 "column": 8
             },
             {
@@ -447,7 +465,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "setProperty(const std::string &, const double)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 803,
+                "line": 806,
                 "column": 8
             },
             {
@@ -456,7 +474,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "setProperty(const std::string &, const int)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 809,
+                "line": 812,
                 "column": 8
             },
             {
@@ -465,7 +483,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "getProperty(const std::string &)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 814,
+                "line": 817,
                 "column": 19
             },
             {
@@ -474,7 +492,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "setup",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 834,
+                "line": 837,
                 "column": 8
             },
             {
@@ -483,7 +501,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "target(const int &, int &)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 856,
+                "line": 859,
                 "column": 10
             },
             {
@@ -492,7 +510,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "gradient(const int &, int &, int &)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 865,
+                "line": 868,
                 "column": 10
             },
             {
@@ -501,7 +519,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "run(const int, const double, const double, const int &, const int &)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 877,
+                "line": 880,
                 "column": 7
             },
             {
@@ -510,7 +528,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "diagnosticsToFile(const std::string)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 1094,
+                "line": 1097,
                 "column": 8
             },
             {
@@ -519,7 +537,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "integratorDiagnosticsToFile(const std::string)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 1103,
+                "line": 1106,
                 "column": 8
             },
             {
@@ -528,7 +546,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "pointSamplesToFile(const std::string)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 1112,
+                "line": 1115,
                 "column": 8
             },
             {
@@ -537,7 +555,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "samplesToFile(const int, const bool, const int, const std::string)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 1120,
+                "line": 1123,
                 "column": 8
             },
             {
@@ -546,7 +564,7 @@
                 "parent_name": "PDPsampler<_model_type_, _ADwrapper_, _integrator_template_, _lambda_template_, _massmatrix_type_>",
                 "name": "intSamplesToFile(const std::string)",
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/PDPsampler.hpp",
-                "line": 1147,
+                "line": 1150,
                 "column": 8
             }
         ]
@@ -642,7 +660,7 @@
     },
     {
         "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/extRKN.hpp",
-        "file_last_write": 1611566155.0,
+        "file_last_write": 1612773102.0,
         "definitions": [
             {
                 "usr": "c:@ST>3#T#T#T@extRKN64",
@@ -3333,6 +3351,84 @@
                 "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/sparseChol.hpp",
                 "line": 441,
                 "column": 8
+            }
+        ]
+    },
+    {
+        "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/stochastic_gradient.hpp",
+        "file_last_write": 1612785020.0,
+        "definitions": [
+            {
+                "usr": "c:@S@sg_lm",
+                "kind": 2,
+                "parent_name": "",
+                "name": "sg_lm",
+                "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/stochastic_gradient.hpp",
+                "line": 16,
+                "column": 7
+            },
+            {
+                "usr": "c:@S@sg_lm@F@sampleInds#",
+                "kind": 7,
+                "parent_name": "sg_lm",
+                "name": "sampleInds",
+                "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/stochastic_gradient.hpp",
+                "line": 30,
+                "column": 8
+            },
+            {
+                "usr": "c:@S@sg_lm@F@getDims#",
+                "kind": 7,
+                "parent_name": "sg_lm",
+                "name": "getDims",
+                "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/stochastic_gradient.hpp",
+                "line": 38,
+                "column": 8
+            },
+            {
+                "usr": "c:@S@sg_lm@F@checkDims#",
+                "kind": 7,
+                "parent_name": "sg_lm",
+                "name": "checkDims",
+                "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/stochastic_gradient.hpp",
+                "line": 48,
+                "column": 8
+            },
+            {
+                "usr": "c:@S@sg_lm@F@resampleMiniBatch#",
+                "kind": 7,
+                "parent_name": "sg_lm",
+                "name": "resampleMiniBatch",
+                "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/stochastic_gradient.hpp",
+                "line": 61,
+                "column": 8
+            },
+            {
+                "usr": "c:@S@sg_lm@F@miniBatchSize#1I#",
+                "kind": 7,
+                "parent_name": "sg_lm",
+                "name": "miniBatchSize(const int)",
+                "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/stochastic_gradient.hpp",
+                "line": 65,
+                "column": 8
+            },
+            {
+                "usr": "c:@S@sg_lm@F@seed#1I#",
+                "kind": 7,
+                "parent_name": "sg_lm",
+                "name": "seed(const int)",
+                "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/stochastic_gradient.hpp",
+                "line": 70,
+                "column": 8
+            },
+            {
+                "usr": "c:@S@sg_lm@FT@>1#Tlpdf#1I#1t0.0#S0_#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "lpdf(const int, const T)",
+                "file": "/Users/torekleppe/Dropbox/work/PDP_HMC/package/pdphmc/inst/include/stochastic_gradient.hpp",
+                "line": 77,
+                "column": 5
             }
         ]
     },

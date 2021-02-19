@@ -167,6 +167,11 @@ build <- function(file,
                   replacement = substr(model.file, block.start[5], block.end[5]),
                   x=out.file ,fixed=TRUE)
   
+  # ATEVENT BLOCK
+  out.file <- sub(pattern="//{[[ATEVENT_BLOCK]]}",
+                  replacement = substr(model.file, block.start[6], block.end[6]),
+                  x=out.file ,fixed=TRUE)
+  
   ###########################################################################
   # Locate DATA variables
   ###########################################################################

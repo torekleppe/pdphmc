@@ -208,6 +208,7 @@ private:
 
 
   int initTrajectoryAdapt(){
+    rkn_.atEvent();
     int eflag = rkn_.firstEval(qcurr_,pcurr_,true);
     if(eflag != 0){
       std::cout << "bad first eval in PDPsampler::initTrajectory" << std::endl;
@@ -355,6 +356,8 @@ private:
     r_.seed(nevents_);
 #endif
     double ltime = 0.0; //local time
+    // run at event block
+    rkn_.atEvent();
     // first evaluation, including momentum resampling
     int eflag = rkn_.firstEval(qcurr_,pcurr_,true);
     if(eflag != 0){

@@ -107,6 +107,9 @@ public:
   double getAbsTol() const {return absTol_;}
   void setRelTol(const double relTol){relTol_=relTol;}
   double getRelTol() const {return relTol_;}
+  
+  void atEvent() {(*t_).atEvent();}
+  
   void setup(_ADtarget_type_& t,
              _lambda_type_& lam,
              _massmatrix_type_& M,

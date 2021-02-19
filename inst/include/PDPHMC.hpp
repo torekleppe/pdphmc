@@ -112,6 +112,8 @@ PDPHMC_errorLog::errorLog _PDPHMC_Warn_("warning");
 #include "transformed_prior.hpp"
 #include "CIP_Wishart.hpp"
 #include "tridiagChol.hpp"
+#include "stochastic_gradient.hpp"
+
 
 #include "json_wrap.hpp"
 

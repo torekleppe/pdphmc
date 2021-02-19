@@ -1,5 +1,5 @@
 /* 
- * example model specification, the target is independent Gaussian
+ * example model specification, y_i \sim iid N(mu,tau^{-1})
  */
  
 

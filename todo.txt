@@ -1,0 +1,2 @@
+-Allow code to run without any generated variables, currently segfaults 
+

@@ -1,0 +1,60 @@
+# Usage
+
+Postponing the definition of new models through model files to Chapter \@ref(the-model-file), the typical workflow when using **pdphmc** consists of the following three steps:
+
+- Building the model.
+- Fitting the model to a given data set.
+- Using output of the fitting process.
+
+Throughout this chapter, we consider the very simple model $y_i \sim N(\mu,1),\;i=1,\dots,n$ where $\{y_i\}_{i=1}^n$ are observed,
+the single parameter $\mu$ has a flat prior, and we wish to draw samples
+from the posterior $p(\mu|\{y_i\}_{i=1}^n)$.
+
+(Okay, we know the posterior in closed form, $\mu|\{y_i\}_{i=1}^n \sim N(\bar y,n^{-1}),\; \bar y = n^{-1}\sum_{i=1}^n y_i$, but for the sake of illustration...)
+
+A model file for this simple model, where we are for some reason also interested 
+in the quantity $\mu^2$ may be something like the following:
+```
+INCLUDE_BLOCK{
+  // not used here
+}
+DATA_BLOCK{
+  DATA_VECTOR(y); // data to be passed from R
+}
+SETUP_BLOCK{
+  // not used here
+}
+VARIABLES_BLOCK{
+  PARAMETER_SCALAR(mu); // the parameter
+  GENERATED_SCALAR(mu_squared); // a transformation of the parameter
+}
+MODEL_BLOCK{
+  // log-likelihood function
+  target += stan::math::normal_lpdf(y,mu,1); // note stan math library available
+  // generated quantities
+  mu_squared = mu*mu;
+}
+```
+From now on, we assume the above code is available in a file titled 
+**iidmodel.cpp** in the current working directory.
+
+
+## Building a model
+The first step for performing analysis is to "build" the model. This process involves two step:
+
+- Translating the model file into a working c++ program (the code in the "blocks" should in all cases be valid c++ code)
+- Compiling the program to obtain a stand alone binary that communicates with **R** using text files. 
+
+Unless your model file contains error, this process should be completely hidden for the user. 
+
+Building of the model is done using the function **build()**, e.g.
+
+```{r eval=FALSE}
+model<-pdphmc::build("iidmodel.cpp")
+```
+
+## Running a model
+ds
+
+## Handling output
+sd
