@@ -162,11 +162,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="usage" class="section level1">
 <h1><span class="header-section-number">2</span> Usage</h1>
-<p>Postponing the definition of new models to Chapter <a href="the-model-file.html#the-model-file">3</a>, the typical workflow when using <strong>pdphmc</strong> consists of the following three steps:</p>
+<p>Postponing the definition of new models through model files to Chapter <a href="the-model-file.html#the-model-file">3</a>, the typical workflow when using <strong>pdphmc</strong> consists of the following three steps:</p>
 <ul>
 <li>Building the model.</li>
 <li>Fitting the model to a given data set.</li>
-<li>Using output of the fitting process</li>
+<li>Using output of the fitting process.</li>
 </ul>
 <p>Throughout this chapter, we consider the very simple model <span class="math inline">\(y_i \sim N(\mu,1),\;i=1,\dots,n\)</span> where <span class="math inline">\(\{y_i\}_{i=1}^n\)</span> are observed,
 the single parameter <span class="math inline">\(\mu\)</span> has a flat prior, and we wish to draw samples
@@ -189,21 +189,53 @@ VARIABLES_BLOCK{
 }
 MODEL_BLOCK{
   // log-likelihood function
-  target += stan::math::normal_lpdf(y,mu,1); 
+  target += stan::math::normal_lpdf(y,mu,1); // note stan math library available
   // generated quantities
   mu_squared = mu*mu;
 }</code></pre>
+<p>From now on, we assume the above code is available in a file titled
+<strong>iidmodel.cpp</strong> in the current working directory.</p>
 <div id="building-a-model" class="section level2">
 <h2><span class="header-section-number">2.1</span> Building a model</h2>
-<p>Suppose the</p>
+<p>The first step for performing analysis is to “build” the model. This process involves two step:</p>
+<ul>
+<li>Translating the model file into a working c++ program (the code in the “blocks” should in all cases be valid c++ code)</li>
+<li>Compiling the program to obtain a stand alone binary that communicates with <strong>R</strong> using text files.</li>
+</ul>
+<p>Unless your model file contains error, this process should be completely hidden for the user.</p>
+<p>Building of the model is done using the function <strong>build()</strong>, e.g.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="usage.html#cb3-1"></a>model&lt;-pdphmc<span class="op">::</span><span class="kw">build</span>(<span class="st">&quot;iidmodel.cpp&quot;</span>)</span></code></pre></div>
+<p>This process should result in a folder “iidmodel_files” containing a single standalone program. The S4 object <code>model</code> contains different metadata regarding the model and the path to the program generated.</p>
+<p>If the model is not correctly specified, <code>pdphmc::build()</code> outputs the compiler errors generated, which may be used to diagonse the problem.</p>
+<p>See the documentation for further arguments to <code>pdphmc::build()</code>, in particular the event rate specification and the mass matrix are specified at this
+stage.</p>
 </div>
 <div id="running-a-model" class="section level2">
 <h2><span class="header-section-number">2.2</span> Running a model</h2>
-<p>ds</p>
+<p>The next step is to run the model using the function <code>pdphmc::run()</code> for a given data set. Here we simulate a data
+set with <span class="math inline">\(n=50\)</span>, and pass it to <code>pdphmc::run()</code> in a named list (name correspond to name given in the <code>DATA_VECTOR()</code>-macro in the model file above).</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="usage.html#cb4-1"></a><span class="kw">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb4-2"><a href="usage.html#cb4-2"></a>data &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">50</span>,<span class="dt">mean=</span><span class="fl">3.0</span>) <span class="co"># the data set to be considered</span></span>
+<span id="cb4-3"><a href="usage.html#cb4-3"></a>fit &lt;-<span class="st"> </span><span class="kw">run</span>(model,<span class="dt">data=</span><span class="kw">list</span>(<span class="dt">y=</span>data)) <span class="co"># output is stored in S4 object &quot;fit&quot;</span></span></code></pre></div>
 </div>
 <div id="handling-output" class="section level2">
 <h2><span class="header-section-number">2.3</span> Handling output</h2>
-<p>sd</p>
+<p>Finally the output from <code>pdphmc::run()</code> may be used in different ways. Most importantly</p>
+<ul>
+<li>get summary statistics (based on <code>rstan::monitor()</code>):</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="usage.html#cb5-1"></a>pdphmc<span class="op">::</span><span class="kw">getMonitor</span>(fit) </span>
+<span id="cb5-2"><a href="usage.html#cb5-2"></a><span class="co">#compare mean of mu against:</span></span>
+<span id="cb5-3"><a href="usage.html#cb5-3"></a><span class="kw">mean</span>(data)</span>
+<span id="cb5-4"><a href="usage.html#cb5-4"></a><span class="co">#compare sd of mu against:</span></span>
+<span id="cb5-5"><a href="usage.html#cb5-5"></a><span class="kw">sqrt</span>(<span class="fl">1.0</span><span class="op">/</span><span class="fl">50.0</span>)</span></code></pre></div>
+<ul>
+<li>get trace plots to check convergence (trace plot also include warmup period)</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="usage.html#cb6-1"></a>pdphmc<span class="op">::</span><span class="kw">trace.plot</span>(fit,<span class="kw">c</span>(<span class="st">&quot;mu&quot;</span>,<span class="st">&quot;mu_squared&quot;</span>))</span></code></pre></div>
+<p><strong>pdphmc</strong> actually both records two types of samples from the underlying PDMP; discrete samples (which were displayed above, and may be used as regular MCMC samples) and continuous/integrated samples. The continuous samples <strong>only have the correct first order moments</strong> and should not be used for estimating standard deviations, quantiles etc. Continuous samples are only recorded for the GENERATED-quantities. The continuous samples may be extracted using e.g.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="usage.html#cb7-1"></a>pdphmc<span class="op">::</span><span class="kw">getIntMonitor</span>(fit)</span>
+<span id="cb7-2"><a href="usage.html#cb7-2"></a>pdphmc<span class="op">::</span><span class="kw">trace.plot.int</span>(fit)</span></code></pre></div>
 
 </div>
 </div>

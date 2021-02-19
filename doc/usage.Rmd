@@ -53,8 +53,45 @@ Building of the model is done using the function **build()**, e.g.
 model<-pdphmc::build("iidmodel.cpp")
 ```
 
+This process should result in a folder "iidmodel_files" containing a single standalone program. The S4 object ```model``` contains different metadata regarding the model and the path to the program generated.
+
+If the model is not correctly specified, ```pdphmc::build()``` outputs the compiler errors generated, which may be used to diagonse the problem.
+
+See the documentation for further arguments to ```pdphmc::build()```, in particular the event rate specification and the mass matrix are specified at this
+stage.
+
 ## Running a model
-ds
+
+The next step is to run the model using the function ```pdphmc::run()``` for a given data set. Here we simulate a data
+set with $n=50$, and pass it to ```pdphmc::run()``` in a named list (name correspond to name given in the ```DATA_VECTOR()```-macro in the model file above).
+
+```{r eval=FALSE}
+set.seed(123)
+data <- rnorm(50,mean=3.0) # the data set to be considered
+fit <- run(model,data=list(y=data)) # output is stored in S4 object "fit"
+```
 
 ## Handling output
-sd
+
+Finally the output from ```pdphmc::run()``` may be used in different ways. Most importantly
+
+* get summary statistics (based on ```rstan::monitor()```):
+```{r eval=FALSE}
+pdphmc::getMonitor(fit) 
+#compare mean of mu against:
+mean(data)
+#compare sd of mu against:
+sqrt(1.0/50.0)
+```
+* get trace plots to check convergence (trace plot also include warmup period)
+```{r eval=FALSE}
+pdphmc::trace.plot(fit,c("mu","mu_squared"))
+```
+
+
+**pdphmc** actually both records two types of samples from the underlying PDMP; discrete samples (which were displayed above, and may be used as regular MCMC samples) and continuous/integrated samples. The continuous samples **only have the correct first order moments** and should not be used for estimating standard deviations, quantiles etc. Continuous samples are only recorded for the GENERATED-quantities. The continuous samples may be extracted using e.g.
+
+```{r eval=FALSE}
+pdphmc::getIntMonitor(fit)
+pdphmc::trace.plot.int(fit)
+```
