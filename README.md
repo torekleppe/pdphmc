@@ -1,6 +1,7 @@
 # pdphmc
 Piecewise deterministic processes using Hamiltonian dynamics
 
+**This package has been discontinued - the current development of numerical generalized randomized HMC is at [https://github.com/torekleppe/pdmphmc]( https://github.com/torekleppe/pdmphmc), which constitute an almost complete rewrite of the methology**
 
 This is the development version of the R-package pdphmc, which is used in the paper "Connecting the Dots: Towards Continuous Time Hamiltonian Monte Carlo" by Tore Selland Kleppe [https://arxiv.org/abs/2005.01285](https://arxiv.org/abs/2005.01285)
 
